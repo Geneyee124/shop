@@ -47,6 +47,6 @@ name: "eachtabbar",
   vertical-align: middle;
 }
 .active{
-  color: yellow;
+  color: var(--color-tint);
 }
 </style>

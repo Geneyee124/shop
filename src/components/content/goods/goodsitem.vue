@@ -1,13 +1,13 @@
 <template>
-<div class="goodsitem">
-  <a :href="goodsitem.link">
-  <img :src="goodsitem.show.img" >
-  </a>
+<div class="goodsitem" @click="itemclick">
+  <a>
+  <img :src="showimage" @load="imageload" >
   <div class="goodsinfo">
     <p>{{goodsitem.title}}</p>
     <span class="price">{{goodsitem.price}}</span>
     <span class="collect">{{goodsitem.cfav}}</span>
   </div>
+  </a>
 </div>
 </template>
 
@@ -21,7 +21,21 @@ name: "goodsitem",
       return{}
     }
   }
+  },
+  computed:{
+  showimage(){
+    return this.goodsitem.image || this.goodsitem.show.img
   }
+  },
+methods:{
+  imageload(){
+    this.$bus.$emit("itemimageload")
+  },
+  itemclick(){
+    // console.log("----跳转到详情页");
+    this.$router.push('./detail/'+this.goodsitem.iid)
+  }
+}
 }
 </script>
 

@@ -23,6 +23,8 @@ name: "bottomtabbar",
   right: 0;
   left: 0;
   box-shadow: 0 1px 1px rgba(100,100,50,0.3);
+  z-index:8;
+
 }
 
 </style>

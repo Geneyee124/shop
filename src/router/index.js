@@ -5,9 +5,8 @@ const home =()=>import("../../views/home/home")
 const car =()=>import("../../views/car/car")
 const category =()=>import("../../views/category/category")
 const my =()=>import("../../views/my/my")
-
+const detail =()=> import('../../views/detail/detail')
 Vue.use(Router)
-
 const routes=[
   {path:'/',
   redirect:'/home'},
@@ -18,7 +17,9 @@ const routes=[
   {path:'/category',
     component:category},
   {path:'/my',
-    component:my}
+    component:my},
+  {path:'/detail/:iid',
+  component:detail}
 ]
 const router=new Router({
     routes,

@@ -1,7 +1,7 @@
 <template>
 <div class="goodslist">
   <goodsitem v-for="(item,index) in goods" :goodsitem="item" :key="index">{{item}}</goodsitem>
-  {{goods}}
+<!--  {{goods}}-->
 </div>
 </template>
 

@@ -51,7 +51,7 @@ name: "tabcontrol",
   padding: 5px;
 }
 .active{
-  color: greenyellow;
-  border-bottom: 3px solid #bfbf0d;
+  color: var(--color-tint);
+  border-bottom: 3px solid var(--color-tint);
 }
 </style>
