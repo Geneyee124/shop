@@ -1,7 +1,7 @@
 <template>
 <div class="goodsitem" @click="itemclick">
   <a>
-  <img :src="showimage" @load="imageload" >
+  <img :src='showimage' @load="imageload" >
   <div class="goodsinfo">
     <p>{{goodsitem.title}}</p>
     <span class="price">{{goodsitem.price}}</span>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
 export default {
 name: "goodsitem",
   props:{
